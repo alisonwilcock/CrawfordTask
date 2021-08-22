@@ -62,6 +62,9 @@ namespace CrawfordTask
                             SqlDataAdapter adapt = new SqlDataAdapter(cmdloss);
                             DataSet dsloss = new DataSet();
                             adapt.Fill(dsloss);
+
+                            conn.Close();
+
                             lossgridview.DataSource = dsloss.Tables[0];
                         }
                         else
